@@ -11,33 +11,32 @@ Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Catalyst/%{upstream_name}-%{upstream_version}.tar.gz
 
+BuildRequires: perl(Authen::SASL)
 BuildRequires: perl(Catalyst)
+BuildRequires: perl(Catalyst::View::Mason)
+BuildRequires: perl(Catalyst::View::TT)
 BuildRequires: perl(Class::C3)
 BuildRequires: perl(Email::MIME)
 BuildRequires: perl(Email::MIME::Creator)
 BuildRequires: perl(Email::Send)
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl(parent)
+
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Helper for Email Views.
 
-METHODS
-    mk_compclass
-
-
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-
-%{make}
+%make
 
 %check
-%{make} test
+%make test
 
 %install
 rm -rf %buildroot
@@ -51,5 +50,3 @@ rm -rf %buildroot
 %doc Changes
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
-
