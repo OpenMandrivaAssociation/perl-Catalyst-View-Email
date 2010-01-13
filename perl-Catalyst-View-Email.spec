@@ -1,5 +1,5 @@
 %define upstream_name    Catalyst-View-Email
-%define upstream_version 0.13
+%define upstream_version 0.16
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -31,6 +31,7 @@ Helper for Email Views.
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
+rm -rf inc
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
