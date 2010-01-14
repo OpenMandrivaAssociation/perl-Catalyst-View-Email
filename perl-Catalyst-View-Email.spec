@@ -20,6 +20,7 @@ BuildRequires: perl(Email::Date::Format)
 BuildRequires: perl(Email::MIME)
 BuildRequires: perl(Email::MIME::Creator)
 BuildRequires: perl(Email::Send)
+BuildRequires: perl(Email::Sender::Simple)
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl(parent)
 
