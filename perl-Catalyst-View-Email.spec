@@ -31,7 +31,6 @@ Helper for Email Views.
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
-rm -rf inc
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
