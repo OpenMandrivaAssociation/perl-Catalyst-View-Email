@@ -1,5 +1,5 @@
 %define upstream_name    Catalyst-View-Email
-%define upstream_version 0.27
+%define upstream_version 0.30
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -22,6 +22,7 @@ BuildRequires: perl(Email::MIME::Creator)
 BuildRequires: perl(Email::Send)
 BuildRequires: perl(Email::Sender::Simple)
 BuildRequires: perl(ExtUtils::MakeMaker)
+BuildRequires: perl(Test::Requires)
 BuildRequires: perl(parent)
 
 BuildArch: noarch
