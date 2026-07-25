@@ -1,15 +1,15 @@
 %define upstream_name    Catalyst-View-Email
-%define upstream_version 0.31
+%define upstream_version 0.36
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Templated Email View
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Catalyst/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://github.com/dhoss/catalyst-view-email
+Source0:	https://cpan.metacpan.org/authors/id/D/DH/DHOSS/Catalyst-View-Email-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
