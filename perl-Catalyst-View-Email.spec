@@ -1,15 +1,13 @@
 %define upstream_name    Catalyst-View-Email
-%define upstream_version 0.36
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.36
+Release:	2
 
 Summary:	Templated Email View
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/dhoss/catalyst-view-email
-Source0:	https://cpan.metacpan.org/authors/id/D/DH/DHOSS/Catalyst-View-Email-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/D/DH/DHOSS/Catalyst-View-Email-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -33,7 +31,7 @@ BuildArch:	noarch
 Helper for Email Views.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
